@@ -34,7 +34,8 @@ class App extends Component{
         }
         return(
             <div>
-                <table>
+                <h1>User Details</h1>
+                <table className="table-bordered responsive table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Name</th>
