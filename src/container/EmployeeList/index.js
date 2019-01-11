@@ -103,7 +103,6 @@ class EmployeeList extends Component{
         });
     }
     handleInputs = (e) => {
-        console.log("hfshgff");
         this.setState({
             [e.target.name]: e.target.value,
         });
@@ -114,7 +113,7 @@ class EmployeeList extends Component{
           return (item.name.toLowerCase().search(e.target.value.toLowerCase()) !== -1);
         });
         this.setState({
-          [e.target.name]: e.target.value,
+          search: e.target.value,
           employee: result
         });
     }
@@ -151,18 +150,10 @@ class EmployeeList extends Component{
         console.log("employee after delete");
     }
     render(){
+
         return(
             <div>
-                <input 
-                    type="text" 
-                    placeholder="Search" 
-                    name="search" 
-                    className="form-control" 
-                    style={{width: '250px', margin: '0 auto', marginBottom: '20px'}} 
-                    aria-describedby="search" 
-                    value={this.state.search} 
-                    onChange={this.handleSearch} 
-                />
+                <h2 className="text-center">Employee Information</h2>
                 {
                     this.state.showList ? 
                         <Dashboard 
@@ -171,6 +162,7 @@ class EmployeeList extends Component{
                             handleDelete={this.handleDelete.bind(this)} 
                             handleAdd={this.handleAdd}
                             handleMultipleDelete={this.handleMultipleDelete}
+                            handleSearch={this.handleSearch}
                         /> 
                     : ('')
                 }
