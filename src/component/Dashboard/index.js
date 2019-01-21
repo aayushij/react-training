@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import * as jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import EmployeeDetail from './../EmployeeDetail';
+import AddEmployee from './../AddEmployee';
+import { Link, Route } from "react-router-dom";
 
 class Dashboard extends Component {
     printDocument = () => {
@@ -17,13 +20,17 @@ class Dashboard extends Component {
     render() {
         const data = this.props.employee.map((element, index) => {
             return <tr key={index}>
-                <td onClick={(e) => this.props.handleClick(element)}>{element.name}</td>
+                <Link to={`/${element.id}`}>
+                    <td>{element.name}</td>
+                </Link>
                 <td onClick={(e) => this.props.handleDelete(index)} className={"btn btn-danger"}>Delete</td>
             </tr>
         })
         return (
             <div>
-                <button type="button" className="btn btn-primary" onClick={(e) => this.props.handleAdd(e)}>Add Employee</button>&nbsp;
+                <Route path="/:id" component={EmployeeDetail} />
+                <Route path="/add" component={AddEmployee} />
+                <Link to='/add' className="btn btn-primary">Add Employee</Link>&nbsp;
                 <button type="button" className="btn btn-primary" onClick={this.printDocument}>Export Pdf</button>
                 <input 
                     type="text" 
