@@ -1,0 +1,76 @@
+/* .dropdown:hover .dropdown-menu {
+  display: block;
+} */
+a{
+  color: #9d9d9d;
+  text-decoration: none;
+}
+.mega-dropdown-menu .dropdown-menu{
+  right: -150px;
+}
+.mega-dropdown-menu a{
+  text-decoration: none;
+  color: #9d9d9d;
+}
+.nav .mega-dropdown-menu.open a:hover,.nav .mega-dropdown-menu.open a:focus,.nav .mega-dropdown-menu.open a{
+  background-color: transparent;
+}
+.mega-dropdown-menu ul{
+  margin-top: 15px;
+  padding: 0px;
+}
+.mega-menu a:focus{
+  border: none
+}
+.mega-menu-list{
+  margin-top: 20px;
+}
+.mega-menu .mega-menu-list div{
+  background-color: #ffffff;
+  opacity: 0.6;
+  min-height: 245px;
+}
+
+.mega-menu .mega-menu-list a{
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.mega-menu{
+  background-image: url('/assets/images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+
+.mega-menu .menu-heading{
+  padding: 5px 0px;
+  font-size: 17px;
+}
+
+.mega-menu li a {
+  display: block;
+  padding: 0px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  white-space: normal;
+  text-decoration: none
+}
+
+.mega-dropdown-menu .open>a, .mega-dropdown-menu .open>a:focus, .mega-dropdown-menu .open>a:hover{
+  background-color: none;
+}
+/* .mega-menu-list{
+  opacity: 0.5;
+  background-color: #fff;
+} */
+/* .active{
+  co
+} */
+
+.product-image{
+  height: 245px;
+  margin-bottom: 10px;
+}
